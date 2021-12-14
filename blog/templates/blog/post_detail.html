@@ -20,15 +20,17 @@
             <h1 class="fw-bolder mb-1">{{ post.title }}</h1>
             <h5 class="text-muted">{{ post.hook_text }}</h5>
 
-            <!-- Post meta content-->
-            <div class="text-muted fst-italic mb-2">{{ post.created_at}} by {{ post.author | upper }}</div>
-
             {% if user.is_authenticated and user == post.author %}
                 <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{ post.pk }}/" role="button">
                     <i class="fas fa-pen"></i>
                     Edit Post
                 </a>
             {% endif %}
+
+            <!-- Post meta content-->
+            <div class="text-muted fst-italic mb-2">{{ post.created_at}} by {{ post.author | upper }}</div>
+
+
         </header>
         <!-- Preview image figure-->
         {% if post.head_image %}
