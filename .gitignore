@@ -133,3 +133,5 @@ dmypy.json
 secrets.json
 migrations/
 _media/
+
+.env.dev
